@@ -138,17 +138,6 @@ test("E2E → Spain → Ebony Pens Matte → Qty 50 → Validate Cart", async ({
   const UpdatedbaseURL = "https://www.helloprint.com/es-es/boligrafoebonymatte?printrun=500";
   await home.openHomePage(UpdatedbaseURL);
 
-// REFRESH PAGE
-// await newPage.reload();
-// await newPage.waitForLoadState("networkidle");
-// console.log("✔ Page refreshed after language switch");
- 
-//   // 4) SELECT FROM SUGGESTION
-//   //await productPage.selectProductUsingSearch("Ebony Pens Matte");
-//   await productPage.navigateToProductSub("Regalos de empresa", "Bolígrafos");
-
-//   await productPage.selectProduct("Bolígrafo premium")
-
   // 4) SELECT QUANTITY
   await productPage.selectQuantityOption("50");
 
