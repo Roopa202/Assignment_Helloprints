@@ -1,0 +1,78 @@
+Read me
+
+Overview
+This project contains end-to-end tests using **Playwright with JavaScript**.  
+Main flow test: `tests/e2e/checkout.spec.js`.
+
+Step 1: Initialize Your Project
+	1. Open terminal in your project folder.
+	2. Initialize Node.js project:
+
+npm init -y or npm init playwright@latest 
+This creates a package.json file,Playwright.config.js file, tests folder with sample spec file amd playwright.yml file.
+
+to check the playwright version 
+npm playwright -v
+-----------------------------------------------------------
+Step 2: Install Playwright
+Install Playwright and its dependencies:
+
+npm install -D @playwright/test
+npx playwright install
+	• -D installs as dev dependency.
+	• npx playwright install installs browser binaries.
+-------------------------------------------------------------
+
+Step 3: Setup Playwright Config
+Create playwright.config.js in your project root:
+
+// playwright.config.js
+import { defineConfig, devices } from '@playwright/test';
+export default defineConfig({
+  testDir: './tests/e2e',
+  reporter: [['html', { outputFolder: 'playwright-report', open: 'always' }]],
+  use: {
+    headless: false,
+    viewport: { width: 1280, height: 720 },
+    ignoreHTTPSErrors: true,
+  },
+});
+	• reporter enables HTML reports
+	• testDir points to your E2E tests
+
+
+
+Playwright E2E Testing Framework
+Overview
+This project contains end-to-end tests using **Playwright with JavaScript**.  
+1. checkout flow test (Part 1 - English & Spanish) 
+2. Search function and remove the product from the cart and validate the cart: `tests/e2e/checkout.spec.js`.
+
+Prerequisites
+- Node.js >= 16
+- npm
+- Git (for pushing to GitHub)
+
+
+Setup Instructions
+1. Clone the repository:
+```bash
+git clone <YOUR_REPO_URL>
+cd my-framework
+	2. Install dependencies:
+npm install
+	3. Install Playwright browsers:
+
+npx playwright install
+Running Tests
+Run all tests:
+
+npx playwright test
+Run a specific test:
+
+npx playwright test tests/e2e/checkout.spec.js
+Test Reports
+HTML report is enabled. After running tests:
+
+npx playwright show-report
+This will open the HTML report in the browser. 

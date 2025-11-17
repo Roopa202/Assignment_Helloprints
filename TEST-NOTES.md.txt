@@ -1,0 +1,7 @@
+Why run these tests?
+	• Search Test – Makes sure customers can easily find products, which helps them use the site smoothly.
+	• Delete Product Test – Checks that users can remove items from their cart, so they don’t get stuck with things they don’t want.
+
+CI/CD Test Priority
+	• Delete Product Test – Medium priority. It’s important for a good shopping experience but doesn’t affect sales directly.
+	• Search Test – Medium to low priority. It helps with usability, but not as crucial as checkout or cart features.
